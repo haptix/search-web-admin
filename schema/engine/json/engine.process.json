@@ -1,0 +1,114 @@
+{
+    "Engine": {
+        "Process": [
+            {
+                "_Name": "Indexes",
+                "_Section": "indexes",
+                "_ConfigClass": "",
+                "_Class": "Appleseed.Services.Search.Console.MethodEngine,Appleseed.Services.Search.Console",
+                "_MethodName": "RunIndexService",
+                "_Enabled": "false",
+                "_SortOrder": "1"
+            },
+            {
+                "_Name": "queues",
+                "_Section": "queues",
+                "_ConfigClass": "",
+                "_Class": "Appleseed.Services.Search.Console.MethodEngine,Appleseed.Services.Search.Console",
+                "_MethodName": "RunQueuesService",
+                "_Enabled": "false",
+                "_SortOrder": "2"
+            },
+            {
+                "_Name": "illuminators",
+                "_Section": "illuminators",
+                "_ConfigClass": "",
+                "_Class": "Appleseed.Services.Search.Console.MethodEngine,Appleseed.Services.Search.Console",
+                "_MethodName": "RunIlluminatorsService",
+                "_Enabled": "false",
+                "_SortOrder": "3"
+            },
+            {
+                "_Name": "graphDBs",
+                "_Section": "graphDBs",
+                "_ConfigClass": "",
+                "_Class": "Appleseed.Services.Search.Console.MethodEngine,Appleseed.Services.Search.Console",
+                "_MethodName": "RunGraphDBsService",
+                "_Enabled": "false",
+                "_SortOrder": "4"
+            },
+            {
+                "_Name": "webcrawlIndexService",
+                "_Section": "websiteIndexService",
+                "_ConfigClass": "Appleseed.Services.Base.Engine.Configuration.WebsiteIndexServiceSection,Appleseed.Services.Base.Engine",
+                "_Class": "Appleseed.Services.Search.Console.MethodEngine,Appleseed.Services.Search.Console",
+                "_MethodName": "RunWebContentIndexService",
+                "_Enabled": "false",
+                "_SortOrder": "5"
+            },
+            {
+                "_Name": "rssIndexService",
+                "_Section": "rssIndexService",
+                "_ConfigClass": "Appleseed.Services.Base.Engine.Configuration.WebsiteIndexServiceSection,Appleseed.Services.Base.Engine",
+                "_Class": "Appleseed.Services.Search.Console.MethodEngine,Appleseed.Services.Search.Console",
+                "_MethodName": "RunRssContentIndexService",
+                "_Enabled": "true",
+                "_SortOrder": "6"
+            },
+            {
+                "_Name": "webcrawlIndexService",
+                "_Section": "webcrawlIndexService",
+                "_ConfigClass": "Appleseed.Services.Base.Engine.Configuration.WebCrawlIndexServiceSection,Appleseed.Services.Base.Engine",
+                "_Class": "Appleseed.Services.Search.Console.MethodEngine,Appleseed.Services.Search.Console",
+                "_MethodName": "RunWebCrawlerIndexService",
+                "_Enabled": "false",
+                "_SortOrder": "7"
+            },
+            {
+                "_Name": "dbFileIndexService",
+                "_Section": "dbFileIndexService",
+                "_ConfigClass": "Appleseed.Services.Base.Engine.Configuration.DbFileIndexServiceSection,Appleseed.Services.Base.Engine",
+                "_Class": "Appleseed.Services.Search.Console.MethodEngine,Appleseed.Services.Search.Console",
+                "_MethodName": "RundbFileIndexService",
+                "_Enabled": "false",
+                "_SortOrder": "8"
+            },
+            {
+                "_Name": "dropboxCloudFileIndexService",
+                "_Section": "dropboxCloudFileIndexService",
+                "_ConfigClass": "Appleseed.Services.Base.Engine.Configuration.DropBoxCloudFileIndexServiceSection,Appleseed.Services.Base.Engine",
+                "_Class": "Appleseed.Services.Search.Console.MethodEngine,Appleseed.Services.Search.Console",
+                "_MethodName": "RunDropboxIndexService",
+                "_Enabled": "false",
+                "_SortOrder": "9"
+            },
+            {
+                "_Name": "nutshellCRMApi",
+                "_Section": "nutshellCRMApiCrawlerIndexService",
+                "_ConfigClass": "Appleseed.Services.Base.Engine.Configuration.NutshellCRMApiCrawlerIndexServiceSection,Appleseed.Services.Base.Engine",
+                "_Class": "Appleseed.Services.Search.Console.MethodEngine,Appleseed.Services.Search.Console",
+                "_MethodName": "RunNutshellIndexService",
+                "_Enabled": "false",
+                "_SortOrder": "10"
+            },
+            {
+                "_Name": "crunchbaseApiCrawlerIndexService",
+                "_Section": "crunchbaseApiCrawlerIndexService",
+                "_ConfigClass": "Appleseed.Services.Base.Engine.Configuration.CrunchBaseApiCrawlerIndexServiceSection,Appleseed.Services.Base.Engine",
+                "_Class": "Appleseed.Services.Search.Console.MethodEngine,Appleseed.Services.Search.Console",
+                "_MethodName": "RunCrunchBaseIndexService",
+                "_Enabled": "false",
+                "_SortOrder": "11"
+            },
+            {
+                "_Name": "taggingService",
+                "_Section": "taggingService",
+                "_ConfigClass": "Appleseed.Services.Base.Engine.Configuration.TagServiceSection,Appleseed.Services.Base.Engine",
+                "_Class": "Appleseed.Services.Search.Console.MethodEngine,Appleseed.Services.Search.Console",
+                "_MethodName": "RunTaggingService",
+                "_Enabled": "false",
+                "_SortOrder": "12"
+            }
+        ]
+    }
+}

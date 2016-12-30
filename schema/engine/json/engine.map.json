@@ -1,0 +1,209 @@
+{
+    "Engine": {
+        "CrunchBaseApiCrawlerIndexServiceSection": {
+            "add": {
+                "Websites": {
+                    "add": {
+                        "_name": "CrunchBase",
+                        "_apiUrl": "http://api.crunchbase.com/v/2/",
+                        "_apiKey": "1d636109dcfc71a7297dd253ac81a7b1",
+                        "_indexPath": "{indexalias1}",
+                        "_connectionString": "server=localhost;Trusted_Connection=yes;database=anant",
+                        "_tableName": "as_Cache_BaseItemCollection",
+                        "_itemsCollected": "33"
+                    }
+                },
+                "_name": "test"
+            }
+        },
+        "DbFileIndexServiceSection": {
+            "add": {
+                "Files": {
+                    "add": {
+                        "_name": "Files",
+                        "_indexPath": "{indexalias1}",
+                        "_connectionString": "server=localhost;Trusted_Connection=yes;database=anant",
+                        "_tableName": "as_Cache_BaseItemCollection"
+                    }
+                },
+                "_name": "test"
+            }
+        },
+        "DropBoxCloudFileIndexServiceSection": {
+            "add": {
+                "Websites": {
+                    "add": {
+                        "_name": "DropBox",
+                        "_appKey": "o9rpu9xlor8kcuy",
+                        "_appSecret": "vm8tz67814qfpl2",
+                        "_token": "kmzr0bnrx8fonlox",
+                        "_tokenSecret": "vhprmrzfxshvnfv",
+                        "_filesPath": "C:\\Projects\\Anant\\KonoTree_Files",
+                        "_connectionString": "server=localhost;Trusted_Connection=yes;database=anant",
+                        "_tableName": "as_Cache_BaseItemCollection",
+                        "_queueName": "{queuealias1}",
+                        "_userAgent": "{userAgent1}"
+                    }
+                },
+                "_name": "test"
+            }
+        },
+        "GraphDBsSection": {
+            "add": {
+                "GraphDBs": {
+                    "add": [
+                        {
+                            "_name": "graphDB1",
+                            "_location": "C:\\Projects\\Anant\\graphDB1",
+                            "_type": "Neo4j",
+                            "_uri": "http://localhost:7474/db/data"
+                        },
+                        {
+                            "_name": "nosqlDB1",
+                            "_location": "C:\\Projects\\Anant\\nosqlDB1",
+                            "_type": "RavenDB",
+                            "_uri": "http://localhost:27017"
+                        }
+                    ]
+                },
+                "_name": "test"
+            }
+        },
+        "IlluminatorsSection": {
+            "add": {
+                "illuminators": {
+                    "add": {
+                        "_name": "Alchemy1",
+                        "_type": "Alchemy",
+                        "_apiKey": "f660783bc9ee055e294367c8f4683fabde01788e"
+                    }
+                },
+                "_name": "test"
+            }
+        },
+        "IndexesSection": {
+            "add": {
+                "indexes": {
+                    "add": [
+                        {
+                            "_name": "indexalias1",
+                            "_location": "C:\\Services\\Appleseed.Search\\Data\\public",
+                            "_type": "Lucene.NET",
+                            "_collectionName": ""
+                        },
+                        {
+                            "_name": "indexalias2",
+                            "_location": "C:\\Services\\Appleseed.Search\\Data\\private",
+                            "_type": "Lucene.NET",
+                            "_collectionName": ""
+                        },
+                        {
+                            "_name": "indexalias5",
+                            "_location": "http://localhost:8983/solr/appleseed-public",
+                            "_type": "Solr",
+                            "_collectionName": "appleseed-public"
+                        }
+                    ]
+                },
+                "_name": "test"
+            }
+        },
+        "NutshellCRMApiCrawlerIndexServiceSection": {
+            "add": {
+                "Websites": {
+                    "add": {
+                        "_name": "Nutshell",
+                        "_apiUrl": "https://app01.nutshell.com/api/v1/json",
+                        "_apiKey": "192d7e16db82a07062acdd64149c20baa727ac08",
+                        "_apiUserEmail": "rahul.singh@anant.us",
+                        "_indexPath": "{indexalias1}",
+                        "_connectionString": "server=ANANT-PC\\SQLEXPRESS;Trusted_Connection=yes;database=anant",
+                        "_tableName": "as_Cache_BaseItemCollection"
+                    }
+                },
+                "_name": "test"
+            }
+        },
+        "QueuesIndexServiceSection": {
+            "add": {
+                "Queues": {
+                    "add": {
+                        "_name": "queuealias1",
+                        "_connectionString": "",
+                        "_queueName": "queueName1",
+                        "_type": "InMemory"
+                    }
+                },
+                "_name": "test"
+            }
+        },
+        "rssIndexServiceSection": {
+            "add": {
+                "Websites": {
+                    "add": {
+                        "_name": "Featured",
+                        "_siteMapUrl": "http://www.beefsafetyresource.com/rssfeed.aspx",
+                        "_indexPath": "{indexalias5}"
+                    }
+                },
+                "_name": "test"
+            }
+        },
+        "TagServiceSection": {
+            "add": {
+                "Sites": {
+                    "add": [
+                        {
+                            "_name": "NATE - DEV",
+                            "_url": "http://dev.natex.anant.co/",
+                            "_portalId": "0",
+                            "_connectionString": "server=localhost;uid=;pwd=;Trusted_Connection=yes;database=anant_as_dev"
+                        },
+                        {
+                            "_name": "HVACR ADVICE - DEV",
+                            "_url": "http://dev.natex.hvacradvice.anant.co",
+                            "_portalId": "0",
+                            "_connectionString": "server=ANANTWEBSERVER1\\ANANTSQL;uid=;pwd=;Trusted_Connection=yes;database=nate_hvacradvice_as_dev"
+                        }
+                    ]
+                },
+                "_name": "test"
+            }
+        },
+        "WebCrawlIndexServiceSection": {
+            "add": {
+                "Websites": {
+                    "add": {
+                        "_name": "ANANT.CO",
+                        "_siteMapUrl": "http://anant.co/",
+                        "_crawlDepth": "100",
+                        "_indexPath": "{indexalias2}",
+                        "_connectionString": "server=localhost;Trusted_Connection=yes;database=anant",
+                        "_tableName": "as_Cache_BaseItemCollection"
+                    }
+                },
+                "_name": "test"
+            }
+        },
+        "WebsiteIndexServiceSection": {
+            "add": {
+                "Websites": {
+                    "add": [
+                        {
+                            "_name": "Anant Corporation",
+                            "_siteMapUrl": "http://anant.us/sitemap.axd",
+                            "_indexPath": "{indexalias1}"
+                        },
+                        {
+                            "_name": "AsitChanges",
+                            "_siteMapUrl": "http://www.asitchanges.com/sitemap.xml",
+                            "_indexPath": "{indexalias1}"
+                        }
+                    ]
+                },
+                "_name": "test"
+            }
+        },
+        "_environment": "test"
+    }
+}
