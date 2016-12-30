@@ -1,5 +1,0 @@
-services
-data/es
-data/mongo
-
-elasticsearch-dump/*
