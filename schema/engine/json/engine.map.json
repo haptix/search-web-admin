@@ -6,7 +6,7 @@
                     "add": {
                         "_name": "CrunchBase",
                         "_apiUrl": "http://api.crunchbase.com/v/2/",
-                        "_apiKey": "1d636109dcfc71a7297dd253ac81a7b1",
+                        "_apiKey": "",
                         "_indexPath": "{indexalias1}",
                         "_connectionString": "server=localhost;Trusted_Connection=yes;database=anant",
                         "_tableName": "as_Cache_BaseItemCollection",
@@ -34,10 +34,10 @@
                 "Websites": {
                     "add": {
                         "_name": "DropBox",
-                        "_appKey": "o9rpu9xlor8kcuy",
-                        "_appSecret": "vm8tz67814qfpl2",
-                        "_token": "kmzr0bnrx8fonlox",
-                        "_tokenSecret": "vhprmrzfxshvnfv",
+                        "_appKey": "",
+                        "_appSecret": "",
+                        "_token": "",
+                        "_tokenSecret": "",
                         "_filesPath": "C:\\Projects\\Anant\\KonoTree_Files",
                         "_connectionString": "server=localhost;Trusted_Connection=yes;database=anant",
                         "_tableName": "as_Cache_BaseItemCollection",
@@ -114,8 +114,8 @@
                     "add": {
                         "_name": "Nutshell",
                         "_apiUrl": "https://app01.nutshell.com/api/v1/json",
-                        "_apiKey": "192d7e16db82a07062acdd64149c20baa727ac08",
-                        "_apiUserEmail": "rahul.singh@anant.us",
+                        "_apiKey": "",
+                        "_apiUserEmail": "",
                         "_indexPath": "{indexalias1}",
                         "_connectionString": "server=ANANT-PC\\SQLEXPRESS;Trusted_Connection=yes;database=anant",
                         "_tableName": "as_Cache_BaseItemCollection"
@@ -142,7 +142,7 @@
                 "Websites": {
                     "add": {
                         "_name": "Featured",
-                        "_siteMapUrl": "http://www.beefsafetyresource.com/rssfeed.aspx",
+                        "_siteMapUrl": "",
                         "_indexPath": "{indexalias5}"
                     }
                 },
@@ -154,14 +154,14 @@
                 "Sites": {
                     "add": [
                         {
-                            "_name": "NATE - DEV",
-                            "_url": "http://dev.natex.anant.co/",
+                            "_name": "DEV",
+                            "_url": "",
                             "_portalId": "0",
                             "_connectionString": "server=localhost;uid=;pwd=;Trusted_Connection=yes;database=anant_as_dev"
                         },
                         {
-                            "_name": "HVACR ADVICE - DEV",
-                            "_url": "http://dev.natex.hvacradvice.anant.co",
+                            "_name": "DEV",
+                            "_url": "",
                             "_portalId": "0",
                             "_connectionString": "server=ANANTWEBSERVER1\\ANANTSQL;uid=;pwd=;Trusted_Connection=yes;database=nate_hvacradvice_as_dev"
                         }
