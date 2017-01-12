@@ -3,7 +3,7 @@
   <CrunchBaseApiCrawlerIndexServiceSection>
     <add name="test">
       <Websites>
-        <add name="CrunchBase" apiUrl="http://api.crunchbase.com/v/2/" apiKey="1d636109dcfc71a7297dd253ac81a7b1" indexPath="{indexalias1}" connectionString="server=localhost;Trusted_Connection=yes;database=anant" tableName="as_Cache_BaseItemCollection" itemsCollected="33" />
+        <add name="CrunchBase" apiUrl="http://api.crunchbase.com/v/2/" apiKey="" indexPath="{indexalias1}" connectionString="server=localhost;Trusted_Connection=yes;database=anant" tableName="as_Cache_BaseItemCollection" itemsCollected="33" />
       </Websites>
     </add>
   </CrunchBaseApiCrawlerIndexServiceSection>
@@ -17,7 +17,7 @@
   <DropBoxCloudFileIndexServiceSection>
     <add name="test">
       <Websites>
-        <add name="DropBox" appKey="o9rpu9xlor8kcuy" appSecret="vm8tz67814qfpl2" token="kmzr0bnrx8fonlox" tokenSecret="vhprmrzfxshvnfv" filesPath="C:\Projects\Anant\KonoTree_Files" connectionString="server=localhost;Trusted_Connection=yes;database=anant" tableName="as_Cache_BaseItemCollection" queueName="{queuealias1}" userAgent="{userAgent1}" />
+        <add name="DropBox" appKey="" appSecret="" token="" tokenSecret="" filesPath="C:\Projects\Anant\KonoTree_Files" connectionString="server=localhost;Trusted_Connection=yes;database=anant" tableName="as_Cache_BaseItemCollection" queueName="{queuealias1}" userAgent="{userAgent1}" />
       </Websites>
     </add>
   </DropBoxCloudFileIndexServiceSection>
@@ -32,7 +32,7 @@
   <IlluminatorsSection>
     <add name="test">
       <illuminators>
-        <add name="Alchemy1" type="Alchemy" apiKey="f660783bc9ee055e294367c8f4683fabde01788e" />
+        <add name="Alchemy1" type="Alchemy" apiKey="" />
       </illuminators>
     </add>
   </IlluminatorsSection>
@@ -51,7 +51,7 @@
   <NutshellCRMApiCrawlerIndexServiceSection>
     <add name="test">
       <Websites>
-        <add name="Nutshell" apiUrl="https://app01.nutshell.com/api/v1/json" apiKey="192d7e16db82a07062acdd64149c20baa727ac08" apiUserEmail="rahul.singh@anant.us" indexPath="{indexalias1}" connectionString="server=ANANT-PC\SQLEXPRESS;Trusted_Connection=yes;database=anant" tableName="as_Cache_BaseItemCollection" />
+        <add name="Nutshell" apiUrl="https://app01.nutshell.com/api/v1/json" apiKey="" apiUserEmail="" indexPath="{indexalias1}" connectionString="server=ANANT-PC\SQLEXPRESS;Trusted_Connection=yes;database=anant" tableName="as_Cache_BaseItemCollection" />
       </Websites>
     </add>
   </NutshellCRMApiCrawlerIndexServiceSection>
@@ -73,8 +73,8 @@
   <TagServiceSection>
     <add name="test">
       <Sites>
-        <add name="NATE - DEV" url="http://dev.natex.anant.co/" portalId="0" connectionString="server=localhost;uid=;pwd=;Trusted_Connection=yes;database=anant_as_dev" />
-        <add name="HVACR ADVICE - DEV" url="http://dev.natex.hvacradvice.anant.co" portalId="0" connectionString="server=ANANTWEBSERVER1\ANANTSQL;uid=;pwd=;Trusted_Connection=yes;database=nate_hvacradvice_as_dev" />
+        <add name="DEV" url="" portalId="0" connectionString="server=localhost;uid=;pwd=;Trusted_Connection=yes;database=anant_as_dev" />
+        <add name="DEV" url="" portalId="0" connectionString="server=ANANTWEBSERVER1\ANANTSQL;uid=;pwd=;Trusted_Connection=yes;database=nate_hvacradvice_as_dev" />
       </Sites>
     </add>
   </TagServiceSection>
