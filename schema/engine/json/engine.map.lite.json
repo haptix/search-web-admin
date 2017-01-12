@@ -7,7 +7,7 @@
                     "add": [
                       
                         {
-                            "_name": "indexalias5",
+                            "_name": "indexalias1",
                             "_location": "http://localhost:8983/solr/appleseed-public",
                             "_type": "Solr",
                             "_collectionName": "appleseed-public"
@@ -23,7 +23,7 @@
                     "add": {
                         "_name": "Featured",
                         "_siteMapUrl": "",
-                        "_indexPath": "{indexalias5}"
+                        "_indexPath": "{indexalias1}"
                     }
                 },
                 "_name": "My RSS Feeds"
