@@ -25,17 +25,62 @@ namespace Search.Web.Admin.Lite.Controls
         protected void Page_Load(object sender, EventArgs e)
         {           
             //Load local node :
-            var node = new Uri("http://localhost:9200");
+            var node = new Uri(txt_eUrl.Text);
             var settings = new ConnectionSettings(node);
             settings.DefaultIndex("my-app");
             var client = new ElasticClient(settings);
-            client.DeleteIndex("my-app");
-            var searchResults = client.Search<SiteMap>();
-
-            test.Text = searchResults.ToString();
 
             //json modified and taken from https://github.com/Appleseed/search-web-admin/blob/master/schema/engine/json/engine.map.lite.json
             var json = @"{
+                ""Engine"": {
+      
+                    ""IndexesSection"": {
+                        ""add"": {
+                            ""indexes"": {
+                                ""add"": [
+                      
+                                    {
+                                        ""_name"": """",
+                                        ""_location"": """",
+                                        ""_type"": """",
+                                        ""_collectionName"": """"
+                                    }
+                                ]
+                            },
+                            ""_name"": """"
+                        }
+                    },
+                     ""rssIndexServiceSection"": {
+                        ""add"": {
+                            ""Websites"": {
+                                ""add"": {
+                                    ""_name"": """",
+                                    ""_siteMapUrl"": """",
+                                    ""_indexPath"": """"
+                                }
+                            },
+                            ""_name"": """"
+                        }
+                    },
+                    ""WebsiteIndexServiceSection"": {
+                        ""add"": {
+                            ""Websites"": {
+                                ""add"": 
+                                    {
+                                        ""_name"": """",
+                                        ""_siteMapUrl"": """",
+                                        ""_indexPath"": """"
+                                    }
+                    
+                            },
+                            ""_name"": """"
+                        }
+                    },
+                    ""_environment"": """"
+                }
+            }";
+
+            var jsonIndex = @"{
                 ""Engine"": {
       
                     ""IndexesSection"": {
@@ -85,76 +130,152 @@ namespace Search.Web.Admin.Lite.Controls
             }";
 
             //client.CreateIndex(json);
-            var indexResponse = client.LowLevel.Index<string>("my-app", "type-name", json);
 
-            //if (!indexResponse.Success)
-            //    Console.WriteLine(indexResponse.DebugInformation);
+            var searchIndexAlias = client.Search<IndexAlias>(s => s
+                .From(0)
+                //.Sort(ss => ss.Ascending(p => p.Name))
+                .Query(q => q.MatchAll())
+            );
 
-            /*
+            var indexAliasResults = "";
+
+            foreach (var hit in searchIndexAlias.Hits)
+            {
+                Console.WriteLine(hit.Source);
+                indexAliasResults += "Name: " + hit.Source.Name + "  ";
+                indexAliasResults += "Location: " + hit.Source.Location + "  ";
+                indexAliasResults += "Type: " + hit.Source.Location + "  ";
+                indexAliasResults += "Collection Name: " + hit.Source.CollectionName + "  " + "<br>";
+            }
+
+            lbl_aliasResults.Text = indexAliasResults;
 
             var searchResultsSiteMap = client.Search<SiteMap>(s => s
-                .AllIndices()
+                .From(0)
+                //.Sort(ss => ss.Ascending(p => p.Name))
+                .Query(q => q.MatchAll())
             );
-            //test.Text = searchResultsSiteMap.Documents;
+
+            var siteMapResults = "";
+
+            foreach (var hit in searchResultsSiteMap.Hits)
+            {
+                Console.WriteLine(hit.Source);
+                siteMapResults += "Name: " + hit.Source.Name + "  ";
+                siteMapResults += "URL: " + hit.Source.Url + "  ";
+                siteMapResults += "Index Path: " + hit.Source.IndexPath + "  " + "<br>";
+            }
+
+            lbl_siteMapResults.Text = siteMapResults;
 
             var searchResultsRss = client.Search<RssFeed>(s => s
-                .AllIndices()
+                .From(0)
+                //.Sort(ss => ss.Ascending(p => p.Name))
+                .Query(q => q.MatchAll())
             );
-            */
+
+            var rssResults = "";
+
+            foreach (var hit in searchResultsRss.Hits)
+            {
+                Console.WriteLine(hit.Source);
+                rssResults += "Name: " + hit.Source.Name + "  ";
+                rssResults += "URL: " + hit.Source.Url + "  ";
+                rssResults += "Index Path: " + hit.Source.IndexPath + "  " + "<br>";
+            }
+
+            lbl_rssResults.Text = rssResults;
+
+
+        }
+
+        public class IndexAlias
+        {
+            public string Name { get; set; }
+            public string Location { get; set; }
+            public string Type { get; set; }
+            public string CollectionName { get; set; }
         }
 
         public class SiteMap
         {
-            public string Id { get; set; }
             public string Name { get; set; }
             public string Url { get; set; }
+            public string IndexPath { get; set; }
         }
 
         public class RssFeed
         {
-            public string Id { get; set; }
             public string Name { get; set; }
             public string Url { get; set; }
+            public string IndexPath { get; set; }
         }
 
-        protected void addSiteMap()
+        protected void addIndexAlias(object sender, System.EventArgs e)
         {
             //Load local node :
-            var node = new Uri("http://localhost:9200");
+            var node = new Uri(txt_eUrl.Text);
             var settings = new ConnectionSettings(
                 node
-            //defaultIndex: "my-application"
             );
+            settings.DefaultIndex("my-app");
+            var client = new ElasticClient(settings);
+
+            var indexAlias = new IndexAlias
+            {
+                Name = txt_aliasName.Text,
+                Location = txt_aliasLocation.Text,
+                Type = txt_aliasType.Text,
+                CollectionName = txt_aliasCollection.Text
+            };
+
+            var index = client.Index(indexAlias);
+
+            Page.Response.Redirect(Page.Request.Url.ToString(), true);
+        }
+
+        protected void addSiteMap(object sender, System.EventArgs e)
+        {
+            //Load local node :
+            var node = new Uri(txt_eUrl.Text);
+            var settings = new ConnectionSettings(
+                node
+            );
+            settings.DefaultIndex("my-app");
             var client = new ElasticClient(settings);
 
             var siteMap = new SiteMap
             {
-                Id = "1",
                 Name = txt_siteMapName.Text,
-                Url = txt_siteMapUrl.Text
+                Url = txt_siteMapUrl.Text,
+                IndexPath = txt_siteMapIndexPath.Text
             };
 
             var index = client.Index(siteMap);
+
+            Page.Response.Redirect(Page.Request.Url.ToString(), true);
         }
 
-        protected void addRssFeed()
+        protected void addRssFeed(object sender, System.EventArgs e)
         {
             //Load local node :
-            var node = new Uri("http://localhost:9200");
+            var node = new Uri(txt_eUrl.Text);
             var settings = new ConnectionSettings(
                 node
-            //defaultIndex: "my-application"
             );
+            settings.DefaultIndex("my-app");
             var client = new ElasticClient(settings);
 
             var rssFeed = new RssFeed
             {
-                Id = "1",
                 Name = txt_rssName.Text,
-                Url = txt_rssUrl.Text
+                Url = txt_rssUrl.Text,
+                IndexPath = txt_rssIndexPath.Text
             };
 
             var index = client.Index(rssFeed);
+
+            Page.Response.Redirect(Page.Request.Url.ToString(), true);
         }
     }
 }

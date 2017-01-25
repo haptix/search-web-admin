@@ -13,13 +13,112 @@ namespace Search.Web.Admin.Lite.Controls {
     public partial class configElastic {
         
         /// <summary>
-        /// eUrl control.
+        /// lbl_eUrl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label eUrl;
+        protected global::System.Web.UI.WebControls.Label lbl_eUrl;
+        
+        /// <summary>
+        /// txt_eUrl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_eUrl;
+        
+        /// <summary>
+        /// lbl_aliasName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_aliasName;
+        
+        /// <summary>
+        /// txt_aliasName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_aliasName;
+        
+        /// <summary>
+        /// lbl_aliasLocation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_aliasLocation;
+        
+        /// <summary>
+        /// txt_aliasLocation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_aliasLocation;
+        
+        /// <summary>
+        /// lbl_aliasType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_aliasType;
+        
+        /// <summary>
+        /// txt_aliasType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_aliasType;
+        
+        /// <summary>
+        /// lbl_aliasCollection control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_aliasCollection;
+        
+        /// <summary>
+        /// txt_aliasCollection control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_aliasCollection;
+        
+        /// <summary>
+        /// btn_addAlias control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_addAlias;
+        
+        /// <summary>
+        /// lbl_aliasResults control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_aliasResults;
         
         /// <summary>
         /// lbl_siteMapName control.
@@ -58,6 +157,24 @@ namespace Search.Web.Admin.Lite.Controls {
         protected global::System.Web.UI.WebControls.TextBox txt_siteMapUrl;
         
         /// <summary>
+        /// lbl_siteMapIndexPath control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_siteMapIndexPath;
+        
+        /// <summary>
+        /// txt_siteMapIndexPath control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_siteMapIndexPath;
+        
+        /// <summary>
         /// btn_addSiteMap control.
         /// </summary>
         /// <remarks>
@@ -67,13 +184,13 @@ namespace Search.Web.Admin.Lite.Controls {
         protected global::System.Web.UI.WebControls.Button btn_addSiteMap;
         
         /// <summary>
-        /// test control.
+        /// lbl_siteMapResults control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label test;
+        protected global::System.Web.UI.WebControls.Label lbl_siteMapResults;
         
         /// <summary>
         /// lbl_rssName control.
@@ -112,6 +229,24 @@ namespace Search.Web.Admin.Lite.Controls {
         protected global::System.Web.UI.WebControls.TextBox txt_rssUrl;
         
         /// <summary>
+        /// lbl_rssIndexPath control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_rssIndexPath;
+        
+        /// <summary>
+        /// txt_rssIndexPath control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txt_rssIndexPath;
+        
+        /// <summary>
         /// btn_rss control.
         /// </summary>
         /// <remarks>
@@ -119,5 +254,14 @@ namespace Search.Web.Admin.Lite.Controls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_rss;
+        
+        /// <summary>
+        /// lbl_rssResults control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_rssResults;
     }
 }

@@ -113,7 +113,9 @@
   <ItemGroup>
     <Content Include="Controls\configElastic.ascx" />
     <Content Include="Index.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\configElastic.ascx.cs">
