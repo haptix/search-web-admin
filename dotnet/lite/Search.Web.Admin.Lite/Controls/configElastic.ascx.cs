@@ -16,6 +16,8 @@ using Appleseed.Framework.Security;
 
 //Nest
 using Nest;
+using Search.Web.Admin.Lite.Providers;
+using Search.Web.Admin.Lite.Providers.Entities;
 
 namespace Search.Web.Admin.Lite.Controls
 {
@@ -23,7 +25,41 @@ namespace Search.Web.Admin.Lite.Controls
     public partial class configElastic : UserControl
     {
         protected void Page_Load(object sender, EventArgs e)
-        {           
+        {
+			/*
+            CassandraProvider csPrd = new CassandraProvider("localhost");
+            var types = csPrd.GetEngineTypes();
+            foreach (var item in types)
+            {
+                Response.Write(string.Format("{0}, {1} <br/>", item.id, item.name));
+            }
+            Response.Write(string.Format("<br/>------------------------------------<br/>"));
+            var newId = csPrd.AddNewEngine(new Providers.Entities.Engine() { name = "Test2" + DateTime.Now.ToString(), typeid = types[1].id });
+            //var engs = csPrd.GetEngines();
+            var eng = csPrd.GetEngine(newId);
+            eng.name = DateTime.Now.ToString();
+            csPrd.UpdateEngine(eng);
+            var engs = csPrd.GetEngines();
+            foreach (var item in engs)
+            {
+                Response.Write(string.Format("{0}, {1} <br/>", item.id, item.name));
+            }
+            Response.Write(string.Format("<br/>------------------------------------<br/>"));
+            var newItmId = csPrd.AddNewEngineItem(new Providers.Entities.EngineItem() { name = "ItemTest1" + DateTime.Now.ToString(), engineid = newId });
+            //var itms = csPrd.GetEngineItems();
+            var engItm = csPrd.GetEngineItem(newItmId);
+            engItm.name = DateTime.Now.ToString();
+            csPrd.UpdateEngineItem(engItm);
+            var itms = csPrd.GetEngineItems();
+            foreach (var item in itms)
+            {
+                Response.Write(string.Format("{0}, {1} <br/>", item.id, item.name));
+            }
+            csPrd.DeleteEngineItem(engItm);
+            csPrd.DeleteEngine(eng);
+            return;
+			*/
+			
             //Load local node :
             var node = new Uri(txt_eUrl.Text);
             var settings = new ConnectionSettings(node);

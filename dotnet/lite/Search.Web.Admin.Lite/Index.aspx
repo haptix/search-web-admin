@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="Search.Web.Admin.Lite.Index" %>
 <%@ Register TagPrefix="uc" TagName="configElastic" Src="~/Controls/configElastic.ascx" %>
+<%@ Register Src="~/Controls/SearchAdminSettingsModule.ascx" TagPrefix="uc" TagName="SearchAdminSettingsModule" %>
+
 
 <!DOCTYPE html>
 
@@ -10,8 +12,7 @@
 <body>
     <div>
         <form id="form1" runat="server">
-            <uc:configElastic id="control1"
-                runat="server"/>
+            <uc:SearchAdminSettingsModule runat="server" ID="SearchAdminSettingsModule" />
         </form>
     </div>
 </body>
